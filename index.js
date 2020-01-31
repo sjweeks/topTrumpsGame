@@ -34,6 +34,10 @@ class harryPotter extends topTrumps {
     }
 }
 
+class pokemon extends topTrumps {
+    
+}
+
 const harry = new harryPotter("Harry Potter", 70, 90, 90, 20);
 const voldermort = new harryPotter("Voldermort", 15, 94, 40, 100);
 const dumbledore = new harryPotter("Dumbledore", 75, 98, 92, 2);
