@@ -4,36 +4,34 @@ class topTrumps {
         this.health = health;
     }
 
-    name(){
+    name() {
         return this.name;
     }
 
     health() {
         return this.health;
     }
-
 }
 
-class harryPotter extends topTrumps{
-    constructor(name, health, magic, courage, evil){
+class harryPotter extends topTrumps {
+    constructor(name, health, magic, courage, evil) {
         super(name, health)
         this.magic = magic;
         this.courage = courage;
         this.evil = evil;
     }
 
-    magic(){
+    magic() {
         return this.magic
     }
 
-    courage(){
+    courage() {
         return this.courage
     }
 
-    evil(){
+    evil() {
         return this.evil
     }
-
 }
 
 const harry = new harryPotter("Harry Potter", 70, 90, 90, 20);
@@ -75,59 +73,129 @@ let harryPotterCards = [
     ginny,
     luna,
     lupin,
-    moody, 
+    moody,
     lucius,
     dudley,
 ]
 
 let shuffle = function (harryPotterCards) {
 
-	let currentIndex = harryPotterCards.length;
-	let temporaryValue, randomIndex;
+    let currentIndex = harryPotterCards.length;
+    let temporaryValue, randomIndex;
 
-	while (0 !== currentIndex) {
-		randomIndex = Math.floor(Math.random() * currentIndex);
-		currentIndex -= 1;
+    while (0 !== currentIndex) {
+        randomIndex = Math.floor(Math.random() * currentIndex);
+        currentIndex -= 1;
 
-		temporaryValue = harryPotterCards[currentIndex];
-		harryPotterCards[currentIndex] = harryPotterCards[randomIndex];
-		harryPotterCards[randomIndex] = temporaryValue;
-	}
-
-	return harryPotterCards;
+        temporaryValue = harryPotterCards[currentIndex];
+        harryPotterCards[currentIndex] = harryPotterCards[randomIndex];
+        harryPotterCards[randomIndex] = temporaryValue;
+    }
+    return harryPotterCards;
 };
 
 shuffle(harryPotterCards);
 
 let holdingCard = []
-let heldCard 
+let heldCard
 
-let player1 = harryPotterCards.splice(0,10);
-let player2 = harryPotterCards.splice(0,10);
+let player1 = harryPotterCards.splice(0, 10);
+let player2 = harryPotterCards.splice(0, 10);
 
 console.log(player1);
 console.log("hello");
 console.log(player2);
 
-if (player1[0].health < player2[0].health) {
-    holdingCard = player1.shift();
-    console.log(`Player 1 lost, new deck size: ${player1.length}`);
-    player2.push(holdingCard);
+const healthFunc = () => {
+    if (player1[0].health < player2[0].health) {
+        holdingCard = player1.shift();
+        console.log(`Player 1 lost, new deck size: ${player1.length}`);
+        player2.push(holdingCard);
+    }
+    else if (player1[0].health > player2[0].health) {
+        holdingCard = player2.shift();
+        console.log(`Player 2 lost, new deck size: ${player2.length}`);
+        player1.push(holdingCard);
+    }
+    else {
+        console.log("Draw");
+        heldCard = player1.shift();
+        holdingCard.push(heldCard)
+        heldCard = player2.shift();
+        holdingCard.push(heldCard);
+        console.log(`${holdingCard.length}`);
+        console.log(`Player 1 lost, new deck size: ${player1.length}`);
+        console.log(`Player 2 lost, new deck size: ${player2.length}`);
+    }
 }
-else if (player1[0].health > player2[0].health) {
-    holdingCard = player2.shift();
-    console.log(`Player 2 lost, new deck size: ${player2.length}`);
-    player1.push(holdingCard);
+
+const magicFunc = () => {
+    if (player1[0].magic < player2[0].magic) {
+        holdingCard = player1.shift();
+        console.log(`Player 1 lost, new deck size: ${player1.length}`);
+        player2.push(holdingCard);
+    }
+    else if (player1[0].magic > player2[0].magic) {
+        holdingCard = player2.shift();
+        console.log(`Player 2 lost, new deck size: ${player2.length}`);
+        player1.push(holdingCard);
+    }
+    else {
+        console.log("Draw");
+        heldCard = player1.shift();
+        holdingCard.push(heldCard)
+        heldCard = player2.shift();
+        holdingCard.push(heldCard);
+        console.log(`${holdingCard.length}`);
+        console.log(`Player 1 lost, new deck size: ${player1.length}`);
+        console.log(`Player 2 lost, new deck size: ${player2.length}`);
+    }
 }
-else {
-    console.log("Draw");
-    heldCard = player1.shift();
-    holdingCard.push(heldCard)
-    heldCard = player2.shift();
-    holdingCard.push(heldCard)
-    console.log(`${holdingCard.length}`);
-    console.log(`Player 1 lost, new deck size: ${player1.length}`);
-    console.log(`Player 2 lost, new deck size: ${player2.length}`);
+
+const courageFunc = () => {
+    if (player1[0].courage < player2[0].courage) {
+        holdingCard = player1.shift();
+        console.log(`Player 1 lost, new deck size: ${player1.length}`);
+        player2.push(holdingCard);
+    }
+    else if (player1[0].courage > player2[0].courage) {
+        holdingCard = player2.shift();
+        console.log(`Player 2 lost, new deck size: ${player2.length}`);
+        player1.push(holdingCard);
+    }
+    else {
+        console.log("Draw");
+        heldCard = player1.shift();
+        holdingCard.push(heldCard)
+        heldCard = player2.shift();
+        holdingCard.push(heldCard);
+        console.log(`${holdingCard.length}`);
+        console.log(`Player 1 lost, new deck size: ${player1.length}`);
+        console.log(`Player 2 lost, new deck size: ${player2.length}`);
+    }
+}
+
+const evilFunc = () => {
+    if (player1[0].evil > player2[0].evil) {
+        holdingCard = player1.shift();
+        console.log(`Player 1 lost, new deck size: ${player1.length}`);
+        player2.push(holdingCard);
+    }
+    else if (player1[0].evil < player2[0].evil) {
+        holdingCard = player2.shift();
+        console.log(`Player 2 lost, new deck size: ${player2.length}`);
+        player1.push(holdingCard);
+    }
+    else {
+        console.log("Draw");
+        heldCard = player1.shift();
+        holdingCard.push(heldCard)
+        heldCard = player2.shift();
+        holdingCard.push(heldCard);
+        console.log(`${holdingCard.length}`);
+        console.log(`Player 1 lost, new deck size: ${player1.length}`);
+        console.log(`Player 2 lost, new deck size: ${player2.length}`);
+    }
 }
 
 const statFunction = () => {
