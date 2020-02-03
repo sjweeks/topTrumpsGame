@@ -59,6 +59,19 @@ const moody = new harryPotter("Alastor Moody", 38, 75, 79, 10)
 const lucius = new harryPotter("Lucius Malfoy", 64, 67, 24, 85);
 const dudley = new harryPotter("Dudley Dursley", 50, 0, 2, 47);
 
+const pikachu = new pokemon("Pikachu", 81, 60, 58, 49);
+const charmander = new pokemon("Charmander", 74, 62, 59, 52);
+const squirtle = new pokemon ("Squirtle", 80, 60, 55, 50);
+const bulbasaur = new pokemon("Bulbasaur", 80, 48, 49, 52);
+const charmeleon = new pokemon("Charmeleon", 88, 83, 70, 65);
+const wartortle = new pokemon("Wartortle", 88, 69, 73, 65); 
+const ivysaur = new pokemon("Ivysaur", 86, 65, 68, 73); 
+const charizard = new pokemon("Charizard", 95, 96, 97, 89); 
+const blastoise = new pokemon("Blastoise", 94, 98, 94, 95);
+const venusaur = new pokemon("Venusaur", 100, 90, 89, 93); 
+const pidgey = new pokemon("Pidgey", 70, 53, 59, 58);
+
+
 let harryPotterCards = [
     harry,
     voldermort,
@@ -81,6 +94,20 @@ let harryPotterCards = [
     lucius,
     dudley,
 ]
+
+let pokemonCards = [
+        pikachu,
+        charmander, 
+        squirtle,
+        bulbasaur, 
+        charmeleon, 
+        wartortle,
+        ivysaur,
+        charizard,
+        blastoise,
+        venusaur,
+        pidgey,
+    ]
 
 let shuffle = function (harryPotterCards) {
 
