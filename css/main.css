@@ -1,0 +1,20 @@
+* {
+    box-sizing: border-box;
+    background-color: wheat;
+}
+
+#container {
+    box-sizing: border-box;
+    border-style: solid;
+    background-color: bisque; 
+    opacity: 0.6;
+    padding: 150px;
+    border-radius: 70px;
+    height: 500px;
+    width: 900px;
+    align-content: center;
+    margin: 0 95px;
+    color: whitesmoke;
+    font-weight: 300;
+    box-shadow: -6px 4px 20px 20px rgba(0,0,0,0.18);
+}

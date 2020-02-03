@@ -164,19 +164,19 @@ let pokemonCards = [
     alakazam,
     ]
 
-// let currentCards []
+let currentCards = [ ]
 
-// const playerChoice = () => {
-//     if (harryPotterCards == true){
-//         console.log("Harry Potter game chosen")
-//         currentCards = harryPotterCards;
-//     }
+const playerChoice = () => {
+    if (harryPotterCards == true){
+        console.log("Harry Potter game chosen")
+        currentCards = harryPotterCards;
+    }
 
-//     else if(pokemonCards == true){
-//         console.log("Pokemon game chosen")
-//         currentCards = pokemonCards;
-//     }
-// }
+    else if(pokemonCards == true){
+        console.log("Pokemon game chosen")
+        currentCards = pokemonCards;
+    }
+}
 
 
 let shuffle = function (harryPotterCards) {
