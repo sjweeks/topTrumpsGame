@@ -89,6 +89,24 @@ const venusaur = new pokemon("Venusaur", 100, 90, 89, 93); 
 const pidgey = new pokemon("Pidgey", 70, 53, 59, 58);
 const pidgeotto = new pokemon("Pidgeotto", 80, 65, 69, 63);
 const pidgeot = new pokemon("Pidgeot", 90, 88, 87, 90);
+const raichu = new pokemon("Raichu", 95, 80, 95, 88);
+const ponyta = new pokemon("Ponyta", 77, 68, 61, 56);
+const rapidash = new pokemon("Rapidash", 93, 85, 78, 71);
+const growlithe = new pokemon("Growlithe", 89, 70, 72, 63);
+const arcanine = new pokemon("Arcanine", 96, 93, 94, 88);
+const staryu = new pokemon("Staryu", 67, 55, 59, 61);
+const starmie = new pokemon("Starmie", 77, 74, 78, 69);
+const magicarp = new pokemon("Magicarp", 65, 29, 21, 25);
+const gyarados = new pokemon("Gyarados", 78, 81, 88, 79);
+const mewtwo = new pokemon("MewTwo", 99, 99, 100, 96); 
+const mew = new pokemon("Mew", 100, 99, 100, 99);
+const ghastly = new pokemon("Ghastly", 67, 49, 76, 78);
+const gengar = new pokemon("Gengar", 70, 62, 85, 79);
+const haunter = new pokemon("Haunter", 81, 78, 82, 80);
+const abra = new pokemon("Abra", 80, 73, 76, 74);
+const kadabra = new pokemon("Kadabra", 89, 82, 85, 83);
+const alakazam = new pokemon("Alakazam", 92, 93, 90, 94);
+
 
 let harryPotterCards = [
     harry,
@@ -127,6 +145,23 @@ let pokemonCards = [
     pidgey,
     pidgeotto,
     pidgeot,
+    raichu,
+    ponyta,
+    rapidash,
+    growlithe,
+    arcanine,
+    staryu,
+    starmie,
+    magicarp,
+    gyarados,
+    mewtwo, 
+    mew,
+    ghastly,
+    gengar,
+    haunter,
+    abra,
+    kadabra,
+    alakazam,
     ]
 
 let shuffle = function (harryPotterCards) {
