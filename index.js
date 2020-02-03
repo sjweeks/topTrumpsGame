@@ -35,7 +35,24 @@ class harryPotter extends topTrumps {
 }
 
 class pokemon extends topTrumps {
-    
+    constructor(name, health, power, attack, defence){
+        super(name, health)
+        this.power = power;
+        this.attack = attack;
+        this.defence = defence;
+    }
+
+    power() {
+        return this.power
+    }
+
+    attack() {
+        return this.attack
+    }
+
+    defence() {
+        return this.defence
+    }
 }
 
 const harry = new harryPotter("Harry Potter", 70, 90, 90, 20);
@@ -70,7 +87,8 @@ const charizard = new pokemon("Charizard", 95, 96, 97, 89); 
 const blastoise = new pokemon("Blastoise", 94, 98, 94, 95);
 const venusaur = new pokemon("Venusaur", 100, 90, 89, 93); 
 const pidgey = new pokemon("Pidgey", 70, 53, 59, 58);
-
+const pidgeotto = new pokemon("Pidgeotto", 80, 65, 69, 63);
+const pidgeot = new pokemon("Pidgeot", 90, 88, 87, 90);
 
 let harryPotterCards = [
     harry,
@@ -96,17 +114,19 @@ let harryPotterCards = [
 ]
 
 let pokemonCards = [
-        pikachu,
-        charmander, 
-        squirtle,
-        bulbasaur, 
-        charmeleon, 
-        wartortle,
-        ivysaur,
-        charizard,
-        blastoise,
-        venusaur,
-        pidgey,
+    pikachu,
+    charmander, 
+    squirtle,
+    bulbasaur, 
+    charmeleon, 
+    wartortle,
+    ivysaur,
+    charizard,
+    blastoise,
+    venusaur,
+    pidgey,
+    pidgeotto,
+    pidgeot,
     ]
 
 let shuffle = function (harryPotterCards) {
