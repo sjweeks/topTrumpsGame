@@ -164,44 +164,55 @@ let pokemonCards = [
     alakazam,
     ]
 
-let currentCards = [ ]
+let currentCards = []
 
-const playerChoice = () => {
-    if (harryPotterCards == true){
-        console.log("Harry Potter game chosen")
-        currentCards = harryPotterCards;
+
+harryPotterCardChoice = true;
+pokemonCardChoice = false;
+
+let playerChoice = () => {
+    if (harryPotterCardChoice == true){
+        console.log("Harry Potter game chosen");
+        currentCards.push(harryPotterCards);
+        return currentCards;
     }
-
-    else if(pokemonCards == true){
-        console.log("Pokemon game chosen")
-        currentCards = pokemonCards;
+    else if(pokemonCardChoice == true){
+        console.log("Pokemon game chosen");
+        currentCards.push(pokemonCards);
+        return currentCards;
+    }
+    else{
+        console.log("Please pick a deck of cards");
     }
 }
+playerChoice();
 
+console.log(currentCards)
+console.log("New New New New New New")
 
-let shuffle = function (harryPotterCards) {
+let shuffle = function (currentCards) {
 
-    let currentIndex = harryPotterCards.length;
+    let currentIndex = currentCards.length;
     let temporaryValue, randomIndex;
 
     while (0 !== currentIndex) {
         randomIndex = Math.floor(Math.random() * currentIndex);
         currentIndex -= 1;
 
-        temporaryValue = harryPotterCards[currentIndex];
-        harryPotterCards[currentIndex] = harryPotterCards[randomIndex];
-        harryPotterCards[randomIndex] = temporaryValue;
+        temporaryValue = currentCards[currentIndex];
+        currentCards[currentIndex] = currentCards[randomIndex];
+        currentCards[randomIndex] = temporaryValue;
     }
-    return harryPotterCards;
+    return currentCards;
 };
 
-shuffle(harryPotterCards);
+shuffle(currentCards);
 
 let holdingCard = []
 let heldCard
 
-let player1 = harryPotterCards.splice(0, 10);
-let player2 = harryPotterCards.splice(0, 10);
+let player1 = currentCards.splice(0, 10);
+let player2 = currentCards.splice(0, 10);
 
 console.log(player1);
 console.log("hello");
